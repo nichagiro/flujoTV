@@ -19,25 +19,6 @@ export default function Home() {
     });
   }, [])
 
-  const getSocials = () => {
-    return {
-      __html: `
-      {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "FLUJO TV INTERNATIONAL",
-        "url": "https://flujotvinter.com/",
-        "address": "",
-        "sameAs": [
-          "https://www.facebook.com/nichagiro",
-          "https://www.instagram.com/overweb28/",
-          "https://linkedin.com/in/nicolas-chamorro-9aa594196"
-        ]
-      }
-    `
-    }
-  }
-
   const getDataStructure = () => {
     return {
       __html: `
@@ -73,16 +54,15 @@ export default function Home() {
 
         <meta name="twitter:title" content="FLUJO TV INTERNATIONAL - APP DE PELICULAS Y SERIES - FLUJO TV" />
         <meta name="twitter:description" content="Explora un mundo de entretenimiento con Flujo TV. Disfruta de streaming de alta calidad con acceso a canales en vivo, amplia selección de series y películas" />
-        <meta name="twitter:image" content="https://flujotvinter.com/img/home.webp" />
+        <meta name="twitter:image" content="https://flujotvinter.com/images/home.webp" />
 
         <meta property="og:url" content="https://flujotvinter.com/" />
         <meta property="og:title" content="FLUJO TV INTERNATIONAL - APP DE PELICULAS Y SERIES - FLUJO TV" />
-        <meta property="og:image" content="https://flujotvinter.com/img/home.webp" />
+        <meta property="og:image" content="https://flujotvinter.com/images/home.webp" />
         <meta property="og:image:alt" content="FLUJO TV ENTRETENIMIENTO" />
         <meta property="og:description" content="Explora un mundo de entretenimiento con Flujo TV. Disfruta de streaming de alta calidad con acceso a canales en vivo, amplia selección de series y películas" />
 
         <script type="application/ld+json" dangerouslySetInnerHTML={getDataStructure()} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={getSocials()} />
       </Head>
       <Layout>
         <Intro />

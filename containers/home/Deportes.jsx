@@ -17,9 +17,9 @@ const Deportes = () => {
       <div className="container py-5">
         <header className="section-header-white">
           <h3 className="d-none d-sm-block">DEPORTES</h3>
-          <p className="h1 d-none d-sm-block">+ DE 80 CANALES DE DEPORTES DISPONIBLES.</p>
+          <p className="h1 d-none d-sm-block">+ DE 100 CANALES DE DEPORTES DISPONIBLES.</p>
         </header>
-        <p className="d-sm-none h1 pb-3 text-white">+ DE 80 CANALES DE DEPORTES DISPONIBLES.</p>
+        <p className="d-sm-none h1 pb-3 text-white">+ DE 100 CANALES DE DEPORTES DISPONIBLES.</p>
         <div className="row">
           <div className="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
             <p className="description">

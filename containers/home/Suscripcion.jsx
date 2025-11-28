@@ -19,7 +19,7 @@ const Suscripcion = () => {
                 <ul className="ul-precios text-left">
                   <div className="row border-precio align-items-center">
                     <i className="fas fa-tv"></i>
-                    <span className="p-3">+800 Canales</span>
+                    <span className="p-3">+1.000 Canales</span>
                   </div>
                   <div className="row border-precio align-items-center">
                     <i className="fas fa-video"></i>
@@ -53,7 +53,7 @@ const Suscripcion = () => {
                 <ul className="ul-precios text-left">
                   <div className="row border-precio align-items-center">
                     <i className="fas fa-tv"></i>
-                    <span className="p-3">+800 Canales</span>
+                    <span className="p-3">+1.000 Canales</span>
                   </div>
                   <div className="row border-precio align-items-center">
                     <i className="fas fa-video"></i>
@@ -88,7 +88,7 @@ const Suscripcion = () => {
                 <ul className="ul-precios text-left">
                   <div className="row border-precio align-items-center">
                     <i className="fas fa-tv"></i>
-                    <span className="p-3">+800 Canales</span>
+                    <span className="p-3">+1.000 Canales</span>
                   </div>
                   <div className="row border-precio align-items-center">
                     <i className="fas fa-video"></i>
