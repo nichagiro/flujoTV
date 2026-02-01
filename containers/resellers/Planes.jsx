@@ -1,5 +1,36 @@
 import WhatsAppButtom from '@/components/custom/WhatsAppButtom'
+import { planesData } from '@/data/planes'
 import React from 'react'
+
+const PlanCard = ({ plan }) => {
+  return (
+    <div className="col-12 col-sm-7 col-lg-4 mb-4">
+      <div className={`card wow animate bounceInUp ${plan.delay} ${plan.color}`}>
+        <h2>{plan.nombre}</h2>
+        <div className="card-body">
+          <b className="precio">{plan.precio}</b>
+          <p className='pb-3' style={{ fontSize: '1.3rem', color: 'white', margin: 0 }}>
+            {plan.creditos}
+          </p>
+          <ul className="ul-precios text-left">
+            {plan.features.map((feature, index) => (
+              <div key={index} className="row border-precio align-items-center">
+                <i className={feature.icon}></i>
+                <span className="p-3">{feature.text}</span>
+              </div>
+            ))}
+          </ul>
+          <div>
+            <WhatsAppButtom
+              label='Comprar'
+              message={plan.mensaje}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const Planes = () => {
   return (
@@ -17,222 +48,9 @@ const Planes = () => {
           </p>
         </header>
         <div className="row row-eq-height w-100 justify-content-center">
-          <div className="col-12 col-sm-7 col-lg-4 mb-4">
-            <div className="card wow animated bounceInUp delay-2s dg-blue">
-              <h2>PANEL BRONCE</h2>
-              <div className="card-body">
-                <b className="precio">30 Creditos</b>
-                <ul className="ul-precios text-left">
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-video"></i>
-                    <span className="p-3">Demo de 6 horas</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-mobile-alt"></i>
-                    <span className="p-3">3 Conexiones por cuenta</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-star-half-alt"></i>
-                    <span className="p-3">Activa cualquier plan</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-play"></i>
-                    <span className="p-3">Vender cuentas</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-tv"></i>
-                    <span className="p-3">No puede vender paneles</span>
-                  </div>
-                </ul>
-                <div>
-                  <WhatsAppButtom
-                    label='Comprar'
-                    message='Me interesa Panel Bronce'
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-sm-7 col-lg-4 mb-4">
-            <div className="card wow bounceInUp dg-theme">
-              <h2>PANEL ORO</h2>
-              <div className="card-body">
-                <b className="precio">50 Creditos</b>
-                <ul className="ul-precios text-left">
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-video"></i>
-                    <span className="p-3">Demo de 6 horas</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-mobile-alt"></i>
-                    <span className="p-3">3 Conexiones por cuenta</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-star-half-alt"></i>
-                    <span className="p-3">Activa cualquier plan</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-play"></i>
-                    <span className="p-3">Vender cuentas</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-tv"></i>
-                    <span className="p-3">No puede vender paneles</span>
-                  </div>
-                </ul>
-                <div>
-                  <WhatsAppButtom
-                    label='Comprar'
-                    message='Me interesa Panel Oro'
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-sm-7 col-lg-4 mb-4">
-            <div className="card wow animate bounceInUp delay-2s dg-purple">
-              <h2>SUPER BRONCE</h2>
-              <div className="card-body">
-                <b className="precio">100 Creditos</b>
-                <ul className="ul-precios text-left">
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-video"></i>
-                    <span className="p-3">Demo de 6 horas</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-mobile-alt"></i>
-                    <span className="p-3">3 Conexiones por cuenta</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-star-half-alt"></i>
-                    <span className="p-3">Activa cualquier plan</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-play"></i>
-                    <span className="p-3">Vender cuentas</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-tv"></i>
-                    <span className="p-3">Puede vender paneles</span>
-                  </div>
-                </ul>
-                <div>
-                  <WhatsAppButtom
-                    label='Comprar'
-                    message='Me interesa Super Panel Bronce'
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-sm-7 col-lg-4 mb-4">
-            <div className="card wow animated bounceInUp delay-2s dg-blue">
-              <h2>SUPER PANEL PLATA</h2>
-              <div className="card-body">
-                <b className="precio">300 Creditos</b>
-                <ul className="ul-precios text-left">
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-video"></i>
-                    <span className="p-3">Demo de 6 horas</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-mobile-alt"></i>
-                    <span className="p-3">3 Conexiones por cuenta</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-star-half-alt"></i>
-                    <span className="p-3">Activa cualquier plan</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-play"></i>
-                    <span className="p-3">Vender cuentas</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-tv"></i>
-                    <span className="p-3">Puede vender paneles</span>
-                  </div>
-                </ul>
-                <div>
-                  <WhatsAppButtom
-                    label='Comprar'
-                    message='Me interesa Super Panel Plata'
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-sm-7 col-lg-4 mb-4">
-            <div className="card wow bounceInUp dg-theme">
-              <h2>SUPER PANEL ORO</h2>
-              <div className="card-body">
-                <b className="precio">500 Creditos</b>
-                <ul className="ul-precios text-left">
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-video"></i>
-                    <span className="p-3">Demo de 6 horas</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-mobile-alt"></i>
-                    <span className="p-3">3 Conexiones por cuenta</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-star-half-alt"></i>
-                    <span className="p-3">Activa cualquier plan</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-play"></i>
-                    <span className="p-3">Vender cuentas</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-tv"></i>
-                    <span className="p-3">Puede vender paneles</span>
-                  </div>
-                </ul>
-                <div>
-                  <WhatsAppButtom
-                    label='Comprar'
-                    message='Me interesa Super Panel Oro'
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-sm-7 col-lg-4 mb-4">
-            <div className="card wow animate bounceInUp delay-2s dg-purple">
-              <h2>SUPER PANEL ORO</h2>
-              <div className="card-body">
-                <b className="precio">1000 Creditos</b>
-                <ul className="ul-precios text-left">
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-video"></i>
-                    <span className="p-3">Demo de 6 horas</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-mobile-alt"></i>
-                    <span className="p-3">3 Conexiones por cuenta</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-star-half-alt"></i>
-                    <span className="p-3">Activa cualquier plan</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-play"></i>
-                    <span className="p-3">Vender cuentas</span>
-                  </div>
-                  <div className="row border-precio align-items-center">
-                    <i className="fas fa-tv"></i>
-                    <span className="p-3">Puede vender paneles</span>
-                  </div>
-                </ul>
-                <div>
-                  <WhatsAppButtom
-                    label='Comprar'
-                    message='Me interesa Super Panel Oro 2'
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+          {planesData.map((plan) => (
+            <PlanCard key={plan.id} plan={plan} />
+          ))}
         </div>
       </div>
     </section>
